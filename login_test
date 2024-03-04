@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- set the encoding of your site -->
+  <meta charset="utf-8">
+  <!-- set the viewport width and initial-scale on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login/signup</title>
+  <!-- include the site stylesheet -->
+
+  <!-- include the site stylesheet -->
+  <link rel="stylesheet" href="/bootstrap.css">
+  <!-- include the site stylesheet -->
+  <link rel="stylesheet" href="/animate.css">
+  <!-- include the site stylesheet -->
+  <link rel="stylesheet" href="/icon-fonts.css">
+  <!-- include the site stylesheet -->
+  <link rel="stylesheet" href="/main.css">
+  <!-- include the site stylesheet -->
+  <link rel="stylesheet" href="/responsive.css">
+  <link rel="stylesheet" href="/style.prefix.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <!-- main container of all the page elements -->
+  <div id="wrapper">
+    <!-- Page Loader -->
+    <div id="pre-loader" class="loader-container">
+      <div class="loader">
+        <img src="images/svg/rings.svg" alt="loader">
+      </div>
+    </div>
+    <div class="w1">
+      <!-- mt header style4 start here -->
+      <!-- mt header style4 end here -->
+      <!-- mt search popup start here -->
+      <div class="mt-search-popup">
+        <div class="mt-holder">
+          <a href="#" class="search-close"><span></span><span></span></a>
+          <div class="mt-frame">
+            <form action="#">
+              <fieldset>
+                <input type="text" placeholder="Search...">
+                <span class="icon-microphone"></span>
+                <button class="icon-magnifier" type="submit"></button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div><!-- mt search popup end here -->
+      <!-- Main of the Page -->
+      <main id="mt-main">
+        <!-- Mt Content Banner of the Page -->
+        <section class="mt-contact-banner" style="background-image: url(http://placehold.it/1920x205);">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <h1>login</h1>
+                <nav class="breadcrumbs">
+                  <ul class="list-unstyled">
+                    <li><a href="index.html">home <i class="fa fa-angle-right"></i></a></li>
+                    <li>login</li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Mt Content Banner of the Page end -->
+        <!-- Mt About Section of the Page -->
+        <section class="mt-about-sec" style="padding-bottom: 0;">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="txt">
+                  <h2>login</h2>
+                  <p>Morbi in erat malesuada, sollicitudin massa at, tristique nisl. Maecenas id eros scelerisque,
+                    vulputate tortor quis, efficitur arcu sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Umco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit sse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    <strong>Vestibulum sit amet metus euismod, condimentum lectus id, ultrices sem.</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Mt About Section of the Page -->
+        <!-- Mt Detail Section of the Page -->
+        <section class="mt-detail-sec toppadding-zero">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-8 col-sm-push-2">
+                <div class="holder" style="margin: 0;">
+                  <div class="mt-side-widget" id="login-form">
+                    <header>
+                      <h2 style="margin: 0 0 5px;">SIGN IN</h2>
+                      <p>Welcome back! Sign in to Your Account</p>
+                    </header>
+                    <form action="#">
+                      <fieldset>
+                        <input type="text" placeholder="email address" class="input" required id="username">
+                        <input type="password" placeholder="Password" class="input" required id="password">
+                        <div class="box">
+                          <span class="left"><input class="checkbox" type="checkbox" id="check1"><label
+                              for="check1">Remember Me</label></span>
+                          <a href="#" class="help">Help?</a>
+                        </div>
+                        <button type="login" class="btn-type1">Login</button>
+                      </fieldset>
+                    </form>
+                    <button onclick="toggleForm('ownerregister')">Register</button>
+                  </div>
+                  <div id="registrationform">
+                    <div class="mt-side-widget " id="ownerregistration-form" style="display: none;">
+                      <header>
+                        <h2 style="margin: 0 0 5px;">SIGN UP</h2>
+                        <p>Be a part of DOGGYDOO family!</p>
+                      </header>
+                      <form>
+                        <fieldset>
+                          <input type="text" placeholder="name" class="input" required id="name">
+                          <input type="tel" placeholder="MOB No." class="input" require id="phone">
+                          <input type="email" placeholder="Email ID" class="input" required id="email">
+                          <input type="password" placeholder="Set Your Password" class="input" required id="rpassword">
+                          <!-- <button type="signup" id="signupButton" class="btn-type1" >signup</button> -->
+                          <!-- <input type="text" placeholder="Re-Enter Your Password" class="input"required id="ReEnterPassword"> -->
+                          <!-- <input type="text" placeholder="Enter Your Full Address" class="input">
+                          <input type="number" placeholder="Enter Your Pin-Code" class="input"> -->
+                        </fieldset>
+                      </form>
+                      <button class="btn-type1" type="submit" onclick="toggleForm('petform')"
+                        id="submit">submit</button>
+                      <button onclick="toggleForm('login')">Back to login</button>
+                    </div>
+                    <div class="mt-side-widget " id="pet-form" style="display: none;">
+                      <header>
+                        <h2 style="margin: 0 0 5px;">Create Your Pet Profile</h2>
+                        <p>Be a part of DOGGYDOO family!</p>
+                      </header>
+                      <form action="#" class="pet">
+                        <fieldset>
+                          <input type="text" placeholder="Pet Name" class="input" id="petName" required>
+                          <input type="text" placeholder="Breed" class="input" id="breed" required>
+                          <input type="number" placeholder="Age" class="input" id="age">
+                          <button type="button" onclick="addPetField()">&#8853 Add Another Pet</button>
+                          <button type="signup" id="signupButton" class="btn-type1">signup</button>
+                          <button onclick="toggleForm('ownerregister')">Back to user registration</button>
+                        </fieldset>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Mt Detail Section of the Page end -->
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <!-- banner frame start here -->
+              <div class="banner-frame toppadding-zero">
+                <!-- banner 5 white start here -->
+                <div class="banner-5 white wow fadeInLeft" data-wow-delay="0.4s">
+                  <img src="http://placehold.it/590x565" alt="image description">
+                  <div class="holder">
+                    <div class="texts">
+                      <strong class="title">banner1 title</strong>
+                      <h3><strong>New</strong> Collection</h3>
+                      <p>Consectetur adipisicing elit. Beatae accusamus, optio, repellendus inventore</p>
+                      <span class="price-add">$ 79.00</span>
+                    </div>
+                  </div>
+                </div><!-- banner 5 white end here -->
+                <!-- banner 6 white start here -->
+                <div class="banner-6 white wow fadeInRight" data-wow-delay="0.4s">
+                  <img src="http://placehold.it/275x565" alt="image description">
+                  <div class="holder">
+                    <strong class="sub-title">product &amp; 2</strong>
+                    <h3>product2</h3>
+                    <span class="offer">
+                      <span class="price-less">$ 659.00</span>
+                      <span class="prices">$ 499.00</span>
+                    </span>
+                    <a href="product-detail.html" class="btn-shop">
+                      <span>shop now</span>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+                </div><!-- banner 5 white end here -->
+                <!-- banner box two start here -->
+                <div class="banner-box two">
+                  <!-- banner 7 right start here -->
+                  <div class="banner-7 right wow fadeInUp" data-wow-delay="0.4s">
+                    <img src="http://placehold.it/295x275" alt="image description">
+                    <div class="holder">
+                      <h2><strong>product <br>3</strong></h2>
+                      <ul class="mt-stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                      </ul>
+                      <div class="price-tag">
+                        <span class="price">$ 99.00</span>
+                        <a class="shop-now" href="product-detail.html">SHOP NOW</a>
+                      </div>
+                    </div>
+                  </div><!-- banner 7 right end here -->
+                  <!-- banner 8 start here -->
+                  <div class="banner-8 wow fadeInDown" data-wow-delay="0.4s">
+                    <img src="http://placehold.it/295x275" alt="image description">
+                    <div class="holder">
+                      <h2><strong>product <br>4 </strong></h2>
+                      <ul class="mt-stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                      </ul>
+                      <div class="price-tag">
+                        <span class="price-off">$ 129.00</span>
+                        <span class="price">$ 99.00</span>
+                        <a class="btn-shop" href="product-detail.html">
+                          <span>HURRY UP!</span>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!-- banner 8 start here -->
+                </div>
+              </div><!-- banner frame end here -->
+            </div>
+          </div>
+        </div>
+      </main><!-- Main of the Page end -->
+      <!-- footer of the Page -->
+      <footer>
+
+        <div class="footer-category">
+
+          <div class="container">
+
+            <h2 class="footer-category-title">Brand directory</h2>
+
+            <div class="footer-category-box">
+
+              <h4 class="category-box-title">Dog Accessories:</h4>
+
+              <a href="#" class="footer-category-link">Collar and Leash</a>
+              <a href="#" class="footer-category-link">Harness</a>
+              <a href="#" class="footer-category-link">Dog Seat Belt/Car Harness</a>
+              <a href="#" class="footer-category-link">Potty Training Pads</a>
+              <a href="#" class="footer-category-link">Reflective Gear</a>
+              <a href="#" class="footer-category-link">Technology Accessories</a>
+
+            </div>
+
+            <div class="footer-category-box">
+              <h4 class="category-box-title">Dog Toys :</h4>
+
+              <a href="#" class="footer-category-link">Chew Toys</a>
+              <a href="#" class="footer-category-link">Squeaky Toys</a>
+              <a href="#" class="footer-category-link">Fetch Toys</a>
+              <a href="#" class="footer-category-link">Tug Toys</a>
+              <a href="#" class="footer-category-link">Interactive Toys</a>
+              <a href="#" class="footer-category-link">Plush Toys</a>
+              <a href="#" class="footer-category-link">Rope Toys</a>
+              <a href="#" class="footer-category-link">Floating Toys</a>
+              <a href="#" class="footer-category-link">Dental Toys</a>
+              <a href="#" class="footer-category-link">Scented Toys</a>
+              <a href="#" class="footer-category-link">Soft Frisbees</a>
+              <a href="#" class="footer-category-link">Bite Tugs</a>
+              <a href="#" class="footer-category-link">Hide-and-Seek Toys</a>
+              <a href="#" class="footer-category-link">Crinkly Toys</a>
+            </div>
+
+            <div class="footer-category-box">
+              <h4 class="category-box-title">Travelling Accessories :</h4>
+
+              <a href="#" class="footer-category-link">Travel Crate</a>
+              <a href="#" class="footer-category-link">Travel Bed</a>
+              <a href="#" class="footer-category-link">Car Seat Cover</a>
+              <a href="#" class="footer-category-link">Dog Seat Belt/Car Harness</a>
+              <a href="#" class="footer-category-link">Travel Water Bottle</a>
+              <a href="#" class="footer-category-link">Collapsible Travel Bowls</a>
+              <a href="#" class="footer-category-link">Dog Backpack</a>
+              <a href="#" class="footer-category-link">Pet First Aid Kit</a>
+              <a href="#" class="footer-category-link">Portable Dog Food Container</a>
+            </div>
+
+            <div class="footer-category-box">
+              <h4 class="category-box-title">Dog Dinings:</h4>
+
+              <a href="#" class="footer-category-link">Dog Bowls</a>
+              <a href="#" class="footer-category-link">Elevated Dog Bowls</a>
+              <a href="#" class="footer-category-link">Automatic Dog Feeders</a>
+              <a href="#" class="footer-category-link">Dog Food Mat</a>
+              <a href="#" class="footer-category-link">Slow Feeder Bowls</a>
+              <a href="#" class="footer-category-link">Interactive Feeders</a>
+              <a href="#" class="footer-category-link">Dog Treat Jars</a>
+              <a href="#" class="footer-category-link">Travel Dog Bowls</a>
+              <a href="#" class="footer-category-link">Raised Feeding Stations</a>
+              <a href="#" class="footer-category-link">Dog Food Storage Containers</a>
+              <a href="#" class="footer-category-link">Dog Water Fountains</a>
+              <a href="#" class="footer-category-link">Puppy Bottle and Nipple</a>
+              <a href="#" class="footer-category-link">Dog Food Scoop</a>
+              <a href="#" class="footer-category-link">Food-Dispensing Toys</a>
+              <a href="#" class="footer-category-link">Heated Dog Bowls</a>
+              <a href="#" class="footer-category-link">Dog Dinnerware Sets</a>
+              <a href="#" class="footer-category-link">Dog High Chairs</a>
+              <a href="#" class="footer-category-link">Mat for Messy Eaters</a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="footer-nav">
+
+          <div class="container">
+
+            <ul class="footer-nav-list">
+
+              <li class="footer-nav-item">
+                <h4 class="nav-title">Popular Categories</h4>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Dog Food</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Dog Accessories</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Dog Toys</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Travelling Accessories</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Dog Dinnings</a>
+              </li>
+
+            </ul>
+
+            <ul class="footer-nav-list">
+
+              <li class="footer-nav-item">
+                <h4 class="nav-title">Products</h4>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Prices drop</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">New products</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Best sales</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Contact us</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Sitemap</a>
+              </li>
+
+            </ul>
+
+            <ul class="footer-nav-list">
+
+              <li class="footer-nav-item">
+                <h4 class="nav-title">Our Company</h4>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Delivery</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Legal Notice</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Terms and conditions</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">About us</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Secure payment</a>
+              </li>
+
+            </ul>
+
+            <ul class="footer-nav-list">
+
+              <li class="footer-nav-item">
+                <h4 class="nav-title">Services</h4>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Prices drop</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">New products</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Best sales</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Contact us</a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">Sitemap</a>
+              </li>
+
+            </ul>
+
+            <ul class="footer-nav-list">
+
+              <li class="footer-nav-item">
+                <h4 class="nav-title">Contact</h4>
+              </li>
+
+              <li class="footer-nav-item flex">
+                <div class="icon-box">
+                  <ion-icon name="location-outline"></ion-icon>
+                </div>
+
+                <address class="content">
+                  doggydoo new friends colony, new delhi
+                </address>
+              </li>
+
+              <li class="footer-nav-item flex">
+                <div class="icon-box">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
+
+                <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+              </li>
+
+              <li class="footer-nav-item flex">
+                <div class="icon-box">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </div>
+
+                <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+              </li>
+
+            </ul>
+
+            <ul class="footer-nav-list">
+
+              <li class="footer-nav-item">
+                <h4 class="nav-title">Follow Us</h4>
+              </li>
+
+              <li>
+                <ul class="social-link">
+
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+          <div class="container">
+
+            <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
+
+            <p class="copyright">
+              Copyright &copy; <a href="#">DoggyDoo LLP</a> all rights reserved.
+            </p>
+
+          </div>
+
+        </div>
+    </div>
+    <span id="back-top" class="fa fa-arrow-up"></span>
+  </div>
+  <script>
+    // Selecting login and registration forms by their id attributes
+    var loginForm = document.getElementById('login-form');
+    var registrationForm = document.getElementById('ownerregistration-form');
+    var petForm = document.getElementById('pet-form');
+
+    // Function to toggle between login and registration forms
+    function toggleForm(formType) {
+      if (formType === 'login') {
+        loginForm.style.display = 'block';
+        registrationForm.style.display = 'none';
+        petForm.style.display = 'none';
+      } else if (formType === 'ownerregister') {
+        loginForm.style.display = 'none';
+        registrationForm.style.display = 'block';
+        petForm.style.display = 'none';
+      }
+      else if (formType === 'petform') {
+        loginForm.style.display = 'none';
+        registrationForm.style.display = 'none';
+        petForm.style.display = 'block';
+
+      }
+    }
+    function addPetField() {
+      var petFields = document.getElementById('pet-fields');
+      var petFieldTemplate = document.querySelector('.pet').cloneNode(true);
+      petFields.appendChild(petFieldTemplate);
+    }
+  </script>
+  <!-- include jQuery -->
+  <script src="/jquery.js"></script>
+  <!-- include jQuery -->
+  <script src="/plugins.js"></script>
+  <!-- include jQuery -->
+  <script src="/jquery.main.js"></script>
+  <script>
+    const login = async () => {
+      const email = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+
+      const raw = JSON.stringify({ email, password });
+
+      const requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+
+      try {
+        const response = await fetch(
+          "https://aljfksdjladksfjkljadfskl1231.abdullahasad.shop/api/users/login",
+          requestOptions
+        );
+
+        if (!response.ok) {
+          if (response.status === 401) {
+            console.error("Unauthorized: Please check your credentials");
+          } else {
+            console.error(`Unexpected response status: ${response.status}`);
+          }
+          return; // Exit the function
+        }
+
+        const result = await response.json();
+        console.log(result);
+
+        // Handle successful login here
+        // For example, redirect to a different page or update UI
+        window.location.href = "/dashboard"; // Redirect to dashboard page
+
+      } catch (error) {
+        console.error("An error occurred:", error);
+        // Handle network errors or other exceptions
+      }
+    };
+
+    document.getElementById('loginForm').addEventListener('loginsubmit', function (event) {
+      event.preventDefault();
+      login();
+    });
+  </script>
+  <script>
+    const registerUser = async () => {
+
+
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('rpassword').value;
+      if (!name.trim()) {
+        alert('Please enter a username');
+        return;
+      }
+
+      if (!phone.trim()) {
+        alert('Please enter a mobile number');
+        return;
+      }
+
+      if (!email.trim()) {
+        alert('Please enter an email');
+        return;
+      }
+
+      if (!password.trim()) {
+        alert('Please enter a password');
+        return;
+      }
+
+      const myHeaders = new Headers();
+      myHeaders.append("Cookie", "lng=en")
+      myHeaders.append("Content-Type", "application/json");
+
+      const raw = JSON.stringify({ name, phone, email, password });
+
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+        credentials: "include"
+
+      };
+
+      try {
+        const response = await fetch(
+          "https://aljfksdjladksfjkljadfskl1231.abdullahasad.shop/api/users/",
+          requestOptions
+        );
+
+        console.log(response);
+
+        const result = await response.json();
+
+        console.log(result);
+
+      } catch (error) {
+        console.error("An error occurred:", error);
+        // Handle network errors or other exceptions
+      }
+    };
+
+    document.getElementById('submit').addEventListener('click', function (event) {
+      event.preventDefault();
+      registerUser();
+    });
+
+
+
+  </script>
+  <script>
+    const setPetData = async () => {
+      const petName = document.getElementById('petName').value;
+      const breed = document.getElementById('breed').value;
+      const age = document.getElementById('age').value;
+
+      const petData = {
+        petName: petName,
+        breed: breed,
+        age: age
+      }
+
+
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+
+      const raw = JSON.stringify({ petData });
+
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+        credentials: "include"
+
+      };
+
+      try {
+        const response = await fetch(
+          "https://aljfksdjladksfjkljadfskl1231.abdullahasad.shop/api/pets",
+          requestOptions
+        );
+
+        console.log(response);
+
+        const result = await response.json();
+
+        console.log(result);
+
+
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    };
+
+
+    document.getElementById('signupButton').addEventListener('click', function (event) {
+      event.preventDefault();
+      setPetData()
+    });
+
+
+
+
+
+  </script>
+
+  <!-- get the Product data -->
+
+  <script>
+    const getProductData = async () => {
+
+
+
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Payload", "payload-token");
+
+      const requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+        credentials: "include"
+
+      };
+
+      try {
+        const response = await fetch(
+          "https://aljfksdjladksfjkljadfskl1231.abdullahasad.shop/api/product",
+          requestOptions
+        );
+
+        console.log(response);
+
+        const result = await response.json();
+
+        console.log(result);
+
+
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    };
+
+
+    document.getElementById('signupButton').addEventListener('click', function (event) {
+      event.preventDefault();
+    });
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
